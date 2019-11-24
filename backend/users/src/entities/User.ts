@@ -1,6 +1,13 @@
-import { PrimaryGeneratedColumn, Entity, Column, OneToOne, ManyToOne, JoinColumn } from 'typeorm'
+import {
+  PrimaryGeneratedColumn,
+  Entity,
+  Column,
+  OneToOne,
+  ManyToOne,
+  JoinColumn,
+} from 'typeorm'
 import { Profile } from './Profile'
-import { Role } from '@backend/roles/src/entities'
+import { RoleModel as Role } from '@backend/roles'
 
 @Entity()
 export class User {
