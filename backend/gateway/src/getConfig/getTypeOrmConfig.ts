@@ -4,10 +4,10 @@ import { checkEnvVarsExist } from './checkEnvVarsExist'
 import { DEVELOPMENT } from './envs'
 
 import { RoleModel, RoleMigrations } from '@backend/roles'
-import { UserModel, ProfileModel } from '@backend/users'
+import { UserModel, ProfileModel, UserMigrations } from '@backend/users'
 
 const Entities = [RoleModel, ProfileModel, UserModel]
-const Migrations = [...RoleMigrations]
+const Migrations = [...RoleMigrations, ...UserMigrations]
 
 export const getTypeOrmConfig = (env: string) => {
   checkEnvVarsExist({
