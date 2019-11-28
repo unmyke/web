@@ -47,11 +47,13 @@ locales/
 
 # Compiled ts
 dist/
+tsconfig.tsbuildinfo
 
 # IDE cache directory
 .c9
 .theia
 .Trash-*
+.ionide
 
 # Minio data folder
 .data
@@ -69,4 +71,10 @@ dist
 .next
 
 # dot env
-.env
+.env*
+
+# GraphQL
+*.gql
+
+# Editor settings
+.vscode
