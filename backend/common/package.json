@@ -12,6 +12,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "accesscontrol": "^2.2.1",
     "reflect-metadata": "0.1.13"
   },
   "devDependencies": {
