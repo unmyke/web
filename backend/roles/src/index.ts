@@ -8,4 +8,5 @@ import { Role as RoleModel } from './entities'
 export class RolesModule {}
 
 export { RoleModel }
+export { RoleMigrations } from './migrations'
 export * from './errors'

@@ -3,10 +3,11 @@ import { TypeOrmModuleOptions } from '@nestjs/typeorm'
 import { checkEnvVarsExist } from './checkEnvVarsExist'
 import { DEVELOPMENT } from './envs'
 
-import { RoleModel } from '@backend/roles'
+import { RoleModel, RoleMigrations } from '@backend/roles'
 import { UserModel, ProfileModel } from '@backend/users'
 
 const Entities = [RoleModel, ProfileModel, UserModel]
+const Migrations = [...RoleMigrations]
 
 export const getTypeOrmConfig = (env: string) => {
   checkEnvVarsExist({
@@ -22,8 +23,8 @@ export const getTypeOrmConfig = (env: string) => {
     username: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
     entities: Entities,
-    migrations: ['../**/migrations/**.ts'],
-    migrationsRun: false,
+    migrations: Migrations,
+    migrationsRun: true,
     synchronize: true,
     logging: env === DEVELOPMENT,
   } as TypeOrmModuleOptions
