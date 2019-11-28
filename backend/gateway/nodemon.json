@@ -1,0 +1,8 @@
+{
+  "restartable": "rs",
+  "ext": "ts,js,json",
+  "quiet": true,
+  "watch": ["../*/dst/**/*.[tj]s"],
+  "ignore": ["*.gql", ".git"],
+  "delay": "3000"
+}

@@ -5,6 +5,8 @@
     "backend/*"
   ],
   "scripts": {
+    "clean": "yarn lerna run clean",
+    "build": "yarn lerna run build --scope @backend/gateway",
     "gateway:dev": "yarn lerna run dev --scope @backend/gateway",
     "typecheck": "lerna run typecheck",
     "lint": "tslint --project tsconfig.json -c tslint.json -t codeFrame backend/**/*.ts"

@@ -8,7 +8,11 @@
     "dist"
   ],
   "scripts": {
-    "dev": "nodemon --exec node -r ts-node/register --watch src src/index.ts",
+    "build": "yarn run clean && yarn run compile",
+    "clean": "rm -rf ./dist",
+    "compile": "tsc --build ./tsconfig.json",
+    "start": "node ./dist",
+    "dev": "nodemon --exec 'yarn run compile && yarn run start'",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
