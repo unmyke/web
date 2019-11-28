@@ -1,26 +1,34 @@
 import {
-  PrimaryGeneratedColumn,
+  PrimaryColumn,
   Entity,
   Column,
   OneToOne,
   ManyToOne,
   JoinColumn,
 } from 'typeorm'
-import { Profile } from './Profile'
+
 import { RoleModel as Role } from '@backend/roles'
+import { Profile } from './Profile'
 
 @Entity()
 export class User {
-  @PrimaryGeneratedColumn()
-  id: number
+  @PrimaryColumn('uuid')
+  id: string
 
-  @Column()
+  @Column({ unique: true })
   email: string
 
-  @OneToOne(type => Profile)
-  profile: Profile
+  @Column()
+  password: string
+
+  @OneToOne(type => Profile, { nullable: true })
+  @JoinColumn()
+  profile?: Profile | null
 
   @ManyToOne(type => Role)
   @JoinColumn()
   role: Role
+
+  @Column({ nullable: true })
+  lastLoginAt?: Date
 }
