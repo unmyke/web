@@ -12,3 +12,5 @@ import { CommandHandlers } from './commands/handlers'
 export class UsersModule {}
 
 export { UserModel, ProfileModel }
+export { UserMigrations } from './migrations'
+export * from './errors'
