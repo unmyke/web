@@ -1,17 +1,21 @@
 {
+  "extends": "./tsconfig.build.json",
   "compilerOptions": {
-    "pretty": true,
-    "target": "es6",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noImplicitAny": false,
-    "noLib": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowJs": true,
-    "lib": ["es6"],
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "preserveSymlinks": true,
-  }
+    "outDir": "./dist",
+    "rootDir": "."
+  },
+  "references": [
+    {
+      "path": "backend/common"
+    },
+    {
+      "path": "backend/gateway"
+    },
+    {
+      "path": "backend/users"
+    },
+    {
+      "path": "backend/roles"
+    }
+  ]
 }
