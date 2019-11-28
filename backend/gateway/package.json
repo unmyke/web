@@ -2,7 +2,11 @@
   "name": "@backend/gateway",
   "version": "0.0.1",
   "license": "MIT",
-  "main": "src/index.ts",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "nodemon --exec node -r ts-node/register --watch src src/index.ts",
     "typecheck": "tsc --noEmit"

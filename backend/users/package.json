@@ -2,7 +2,11 @@
   "name": "@backend/users",
   "version": "0.0.1",
   "license": "MIT",
-  "main": "src/index.ts",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
