@@ -9,6 +9,7 @@ import { CommandHandlers } from './commands/handlers'
 
 import { Resolvers } from './resolvers'
 
+import { UserService } from './UserService'
 import { UserSerializer, ProfileSerializer } from './serializers'
 
 @Module({
@@ -20,13 +21,15 @@ import { UserSerializer, ProfileSerializer } from './serializers'
   providers: [
     ...Resolvers,
     ...CommandHandlers,
+    UserService,
     UserSerializer,
     ProfileSerializer,
   ],
-  exports: [...Resolvers, ...CommandHandlers],
+  exports: [...Resolvers, ...CommandHandlers, UserService],
 })
 export class UsersModule {}
 
 export { UserModel, ProfileModel }
+export { UserService }
 export { UserMigrations } from './migrations'
 export * from './errors'
