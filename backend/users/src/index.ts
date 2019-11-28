@@ -6,6 +6,7 @@ import { User as UserModel, Profile as ProfileModel } from './entities'
 
 import { CqrsModule } from '@nestjs/cqrs'
 import { CommandHandlers } from './commands/handlers'
+import { QueryHandlers } from './queries/handlers'
 
 import { Resolvers } from './resolvers'
 
@@ -20,12 +21,13 @@ import { UserSerializer, ProfileSerializer } from './serializers'
   ],
   providers: [
     ...Resolvers,
+    ...QueryHandlers,
     ...CommandHandlers,
     UserService,
     UserSerializer,
     ProfileSerializer,
   ],
-  exports: [...Resolvers, ...CommandHandlers, UserService],
+  exports: [...Resolvers, ...QueryHandlers, ...CommandHandlers, UserService],
 })
 export class UsersModule {}
 
@@ -34,3 +36,4 @@ export { UserService }
 export { UserMigrations } from './migrations'
 export * from './errors'
 export * from './events'
+export * from './queries/impl'
