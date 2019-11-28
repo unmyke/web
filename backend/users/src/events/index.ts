@@ -1,0 +1,6 @@
+export * from './ProfileCreatedEvent'
+export * from './ProfileDeletedEvent'
+export * from './ProfileUpdatedEvent'
+export * from './CreateProfileFailedEvent'
+export * from './DeleteProfileFailedEvent'
+export * from './UpdateProfileFailedEvent'

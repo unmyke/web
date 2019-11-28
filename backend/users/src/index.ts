@@ -33,3 +33,4 @@ export { UserModel, ProfileModel }
 export { UserService }
 export { UserMigrations } from './migrations'
 export * from './errors'
+export * from './events'
