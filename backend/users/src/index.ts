@@ -36,4 +36,5 @@ export { UserService }
 export { UserMigrations } from './migrations'
 export * from './errors'
 export * from './events'
+export * from './commands/impl'
 export * from './queries/impl'
