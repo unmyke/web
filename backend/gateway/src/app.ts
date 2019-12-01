@@ -14,6 +14,7 @@ import {
   ResourceAccessModule,
   AccessControlMiddleware,
 } from '@backend/resource-access'
+import { ScalarResolvers } from '@backend/common'
 
 import { getConfig } from './getConfig'
 
@@ -37,6 +38,7 @@ const { graphQL: graphQLConfig, typeOrm: typeOrmConfig } = getConfig()
       provide: APP_GUARD,
       useClass: ResourceGuard,
     },
+    ...ScalarResolvers,
   ],
 })
 export class ApplicationModule implements NestModule {
