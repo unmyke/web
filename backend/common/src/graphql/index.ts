@@ -1,4 +1,5 @@
 export * from './contexts'
 export * from './enums'
+export * from './interfaces'
 export * from './scalars'
 export * from './decorators'
