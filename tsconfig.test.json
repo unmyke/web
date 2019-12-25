@@ -1,0 +1,24 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": ".",
+    "noImplicitAny": false
+  },
+  "references": [
+    {
+      "path": "./backend/common"
+    },
+    {
+      "path": "./backend/gateway"
+    },
+    {
+      "path": "./backend/users"
+    },
+    {
+      "path": "./backend/roles"
+    }
+  ],
+  "include": ["**/*.test.ts"],
+  "exclude": ["**/node_modules", "**/dist"]
+}
