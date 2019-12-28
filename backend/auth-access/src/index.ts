@@ -1,6 +1,10 @@
 import { Module } from '@nestjs/common'
 
-@Module({})
+import { JwtService } from './JwtService'
+@Module({
+  providers: [JwtService],
+  exports: [JwtService],
+})
 export class AuthAccessModule {}
 
 export * from './AccessGuard'
