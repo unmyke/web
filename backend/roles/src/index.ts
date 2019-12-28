@@ -10,3 +10,4 @@ export * from './enums'
 export class RolesModule {}
 
 export { RoleModel }
+export * from './errors'
