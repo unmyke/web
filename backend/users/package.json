@@ -12,12 +12,12 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@nestjs/common": "6.3.1",
-    "@nestjs/typeorm": "6.1.2",
-    "@nestjs/cqrs": "6.0.0",
-    "typeorm": "0.2.18"
+    "@nestjs/common": "6.10.13",
+    "@nestjs/cqrs": "6.1.0",
+    "@nestjs/typeorm": "6.2.0",
+    "typeorm": "0.2.22"
   },
   "devDependencies": {
-    "@types/node": "12.0.8"
+    "@types/node": "13.1.1"
   }
 }
