@@ -10,3 +10,4 @@ export class AuthAccessModule {}
 export * from './AccessGuard'
 export * from './errors'
 export * from './AuthMiddleware'
+export * from './events'
