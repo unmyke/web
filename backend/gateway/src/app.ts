@@ -9,7 +9,11 @@ import {
   AuthAccessModule,
   AuthMiddleware,
 } from '@backend/auth-access'
-import { ResourceGuard } from '@backend/resource-access'
+import {
+  ResourceGuard,
+  ResourceAccessModule,
+  AccessControlMiddleware,
+} from '@backend/resource-access'
 
 import { getConfig } from './getConfig'
 
@@ -22,6 +26,7 @@ const { graphQL: graphQLConfig, typeOrm: typeOrmConfig } = getConfig()
     AuthAccessModule,
     UsersModule,
     RolesModule,
+    ResourceAccessModule,
   ],
   providers: [
     {
@@ -36,6 +41,8 @@ const { graphQL: graphQLConfig, typeOrm: typeOrmConfig } = getConfig()
 })
 export class ApplicationModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer.apply(AuthMiddleware).forRoutes(graphQLConfig.path as string)
+    consumer
+      .apply(AuthMiddleware, AccessControlMiddleware)
+      .forRoutes(graphQLConfig.path as string)
   }
 }

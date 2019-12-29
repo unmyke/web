@@ -7,4 +7,5 @@ import { ResourceGuard } from './ResourceGuard'
   providers: [ResourceGuard],
 })
 export class ResourceAccessModule {}
+export { AccessControlMiddleware } from './AccessControlMiddleware'
 export { ResourceGuard }
