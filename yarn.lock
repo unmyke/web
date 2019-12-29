@@ -999,7 +999,7 @@
   resolved "https://registry.yarnpkg.com/@nestjs/cqrs/-/cqrs-6.1.0.tgz#84529cfcdffa43624e251b1a71d61591fd4c3cad"
   integrity sha512-J1csaa2LdodZtwXOoYNcnqvFzk+G3RAR+G0N8k1/dlP7GvDJT3OakS2YXPiOSl7fEMOD40eS4+9sQMs8xqiegw==
 
-"@nestjs/graphql@6.5.3":
+"@nestjs/graphql@6.5.3", "@nestjs/graphql@^6.5.3":
   version "6.5.3"
   resolved "https://registry.yarnpkg.com/@nestjs/graphql/-/graphql-6.5.3.tgz#6330b30d065bbe919abdcd3d30f8d319acfd3bbf"
   integrity sha512-k+mR+5Dhl2GsszpvNIvvM+9PHlJZncOEvQGHhC0loaHttL75PwU8m3Lwgcgun3Ej1OE1w6h6UwL4sc9PoxNZxA==
@@ -1026,7 +1026,7 @@
     express "4.17.1"
     multer "1.4.2"
 
-"@nestjs/typeorm@6.2.0":
+"@nestjs/typeorm@6.2.0", "@nestjs/typeorm@^6.2.0":
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/@nestjs/typeorm/-/typeorm-6.2.0.tgz#6b8e3d80e3fbd9dc5e0a9d1ebf3028f7adb1ace9"
   integrity sha512-CRDYV3oxTUa6mTDJfdW+RPLtVUpGx0RpigQdLlvMFLM56v+bYnrTuuy4vurKDgLNFC+AttL9JLZOgRhW8fGdgQ==
@@ -7359,7 +7359,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typeorm@0.2.22:
+typeorm@0.2.22, typeorm@^0.2.22:
   version "0.2.22"
   resolved "https://registry.yarnpkg.com/typeorm/-/typeorm-0.2.22.tgz#e85166e29ee4e4248ed73b2b8c977f364ffba606"
   integrity sha512-mDEnMtzRwX4zMYbyzM9xDn7jvGs8hfQ2ymOBq36Zxq1RVM642numwlRbr4W8dU7ZYx8CQUE9rmk+sU0baHD9Rw==
