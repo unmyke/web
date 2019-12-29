@@ -7,8 +7,9 @@
   },
   "references": [
     { "path": "../common" },
+    { "path": "../auth-access" },
     { "path": "../users" },
-    { "path": "../roles" },
+    { "path": "../roles" }
   ],
   "exclude": ["node_modules", "dist"]
 }
