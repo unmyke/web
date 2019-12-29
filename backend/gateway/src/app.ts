@@ -9,6 +9,7 @@ import {
   AuthAccessModule,
   AuthMiddleware,
 } from '@backend/auth-access'
+import { ResourceGuard } from '@backend/resource-access'
 
 import { getConfig } from './getConfig'
 

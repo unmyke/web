@@ -8,6 +8,7 @@
   "references": [
     { "path": "../common" },
     { "path": "../auth-access" },
+    { "path": "../resource-access" },
     { "path": "../users" },
     { "path": "../roles" }
   ],
