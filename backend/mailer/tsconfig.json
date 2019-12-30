@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.build.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "tsBuildInfoFile": "dist/.tsbuildinfo"
+  },
+  "references": [
+    { "path": "../common" },
+    { "path": "../auth-access" },
+    { "path": "../users" }
+  ],
+  "exclude": ["node_modules", "dist"]
+}
