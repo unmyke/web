@@ -3,9 +3,12 @@ import { Module } from '@nestjs/common'
 import { UsersModule } from '@backend/users'
 import { MailService } from './MailService'
 
+import { CqrsModule } from '@nestjs/cqrs'
+import { CommandHandlers } from './commands/handlers'
 @Module({
-  imports: [UsersModule],
-  providers: [MailService],
+  imports: [CqrsModule, UsersModule],
+  providers: [MailService, ...CommandHandlers],
+  exports: [...CommandHandlers],
 })
 export class MailerModule {}
 
