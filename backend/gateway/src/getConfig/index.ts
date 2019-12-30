@@ -2,6 +2,7 @@ import { Env } from './envs'
 import { getGraphQLConfig } from './getGraphQLConfig'
 import { getTypeOrmConfig } from './getTypeOrmConfig'
 import { checkEnvVarsExist } from './checkEnvVarsExist'
+import { getMailerConfig } from './getMailerConfig'
 
 export const getConfig = () => {
   checkEnvVarsExist({
@@ -13,5 +14,6 @@ export const getConfig = () => {
   return {
     graphQL: getGraphQLConfig(NODE_ENV),
     typeOrm: getTypeOrmConfig(NODE_ENV),
+    mailer: getMailerConfig(NODE_ENV),
   }
 }

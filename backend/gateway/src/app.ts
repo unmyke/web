@@ -1,8 +1,10 @@
 import { NestModule, MiddlewareConsumer, Module } from '@nestjs/common'
 import { GraphQLModule } from '@nestjs/graphql'
 import { TypeOrmModule } from '@nestjs/typeorm'
+import { MailerModule as NestMailerModule } from '@nest-modules/mailer'
 import { UsersModule } from '@backend/users'
 import { RolesModule } from '@backend/roles'
+import { MailerModule } from '@backend/mailer'
 import { APP_GUARD } from '@nestjs/core'
 import {
   AccessGuard,
@@ -18,16 +20,22 @@ import { ScalarResolvers } from '@backend/common'
 
 import { getConfig } from './getConfig'
 
-const { graphQL: graphQLConfig, typeOrm: typeOrmConfig } = getConfig()
+const {
+  graphQL: graphQLConfig,
+  typeOrm: typeOrmConfig,
+  mailer: mailerConfig,
+} = getConfig()
 
 @Module({
   imports: [
     TypeOrmModule.forRoot(typeOrmConfig),
     GraphQLModule.forRoot(graphQLConfig),
+    NestMailerModule.forRoot(mailerConfig),
     AuthAccessModule,
     UsersModule,
     RolesModule,
     ResourceAccessModule,
+    MailerModule,
   ],
   providers: [
     {

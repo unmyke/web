@@ -10,7 +10,8 @@
     { "path": "../auth-access" },
     { "path": "../resource-access" },
     { "path": "../users" },
-    { "path": "../roles" }
+    { "path": "../roles" },
+    { "path": "../mailer" }
   ],
   "exclude": ["node_modules", "dist"]
 }
