@@ -8,3 +8,5 @@ import { MailService } from './MailService'
   providers: [MailService],
 })
 export class MailerModule {}
+
+export * from './events'
