@@ -1,4 +1,10 @@
 import { Module } from '@nestjs/common'
 
-@Module({})
+import { UsersModule } from '@backend/users'
+import { MailService } from './MailService'
+
+@Module({
+  imports: [UsersModule],
+  providers: [MailService],
+})
 export class MailerModule {}
