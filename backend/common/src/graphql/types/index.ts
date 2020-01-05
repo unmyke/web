@@ -7,3 +7,6 @@ export * from './UserNotFoundProblem'
 export * from './UserExistsProblem'
 export * from './ValidationProblem'
 
+export * from './ResourceList'
+export * from './MutationPayload'
+
