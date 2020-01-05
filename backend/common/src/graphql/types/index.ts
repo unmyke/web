@@ -1,3 +1,6 @@
+export * from './SuccessMutationPayload'
+export * from './FailMutationPayload'
+
 export * from './ServerProblem'
 export * from './AccessDeniedProblem'
 export * from './UserNotFoundProblem'
