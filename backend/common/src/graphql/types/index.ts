@@ -10,3 +10,6 @@ export * from './ValidationProblem'
 export * from './ResourceList'
 export * from './MutationPayload'
 
+export * from './CreateMutationPayload'
+export * from './DeleteMutationPayload'
+export * from './UpdateMutationPayload'
